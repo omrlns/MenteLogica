@@ -156,3 +156,19 @@ else:
         if cedulas_2 > 0:
             print(f"{cedulas_2} x R$2")
 
+# DESAFIOS EXTRAS
+# 1, aprovando empréstimo bancário
+valor_emprestimo = float(input('digite o valor do empréstimo: R$'))
+renda_mensal = float(input('digite a sua renda mensal: R$'))
+numero_parcelas = int(input('digite o número de parcelas: '))
+
+valor_parcela = valor_emprestimo / numero_parcelas
+limite_parcela = renda_mensal * 0.30
+
+if valor_parcela <= limite_parcela:
+     print('empréstimo aprovad.')
+     print(f'valor da parcela: R${valor_parcela:.2f}')
+
+else:
+     print('empréstimo negado.')
+     print(f'valor da parcela R${valor_parcela:.2f} excede 30% da sua renda mensal.')
