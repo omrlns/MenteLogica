@@ -166,9 +166,46 @@ valor_parcela = valor_emprestimo / numero_parcelas
 limite_parcela = renda_mensal * 0.30
 
 if valor_parcela <= limite_parcela:
-     print('empréstimo aprovad.')
+     print('empréstimo aprovado.')
      print(f'valor da parcela: R${valor_parcela:.2f}')
 
 else:
      print('empréstimo negado.')
      print(f'valor da parcela R${valor_parcela:.2f} excede 30% da sua renda mensal.')
+
+# 2, jogo do pedra, papel e tesoura
+import random
+
+opcoes = ['pedra', 'papel', 'tesoura']
+
+usuario = input('escolha pedra, papel ou tesoura: ').lower()
+computador = random.choice(opcoes)
+
+print(f'você escolheu: {usuario}')
+print(f'o computador escolheu: {computador}')
+
+if usuario == computador:
+     print('empate!')
+
+elif (usuario == 'pedra' and computador == 'tesoura') or \
+     (usuario == 'papel' and computador == 'pedra') or \
+     (usuario == 'tesoura' and computador == 'papel'): 
+    print('você venceu!')
+elif usuario in opcoes:
+    print('você perdeu!')
+else:
+     print('escolha inválida.')
+
+
+print(linha)
+
+# 3, calculadora de tarifas de táxi
+distancia = float(input('digite a distância percorrida em km: '))
+
+tarifa_basica = 4.00
+custo_por_km = 0.25
+
+valor_total = tarifa_basica + (custo_por_km * distancia)
+
+print(f'valor total da corrida: R${valor_total:.2f}')
+print(linha)
