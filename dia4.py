@@ -1,5 +1,5 @@
 linha = '--------------------------------------------------'
-#ESTRUTURAS CONDICIONAIS
+# ESTRUTURAS CONDICIONAIS
 
 # 1, decidindo o que vestir
 clima = 'chuvoso'
