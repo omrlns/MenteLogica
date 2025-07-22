@@ -17,7 +17,7 @@ print('=' * 22)
 
 while True:
     numeroCPU = randint(1, 100)
-    tentativasRestantes = 7
+    tentativasRestantes = 5
     tentativas = 0
 
     print('EU PENSEI EM UM NÚMERO ENTRE 1 E 100...')
