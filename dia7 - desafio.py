@@ -24,6 +24,7 @@ while True:
     print('VOCÊ CONSEGUE ADIVINHAR?')
     print('USE AS SUAS 7 TENTATIVAS SABIAMENTE!')
 
+
     while tentativasRestantes > 0:
         palpite = int(input('\nDIGITE O SEU PALPITE: '))
 
