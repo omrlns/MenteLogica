@@ -1,36 +1,36 @@
-def celsius_para_fahrenheit(c):
+def celsiusParaFahrenheit(c):
     return c * 9/5 + 32
 
-def fahrenheit_para_celsius(f):
+def FahrenheitParaCelsius(f):
     return (f - 32) * 5/9
 
-def celsius_para_kelvin(c):
+def CelsiusParaKelvin(c):
     return c + 273.15
 
-def kelvin_para_celsius(k):
+def KelvinParCelsius(k):
     return k - 273.15
 
-temperatura = float(input("Digite a temperatura: "))
-unidade = input("Digite a unidade atual (C, F, K): ").upper()
-converter_para = input("Converter para (C, F, K): ").upper()
+temperatura = float(input('digite a temperatura: '))
+unidade = str(input('digite a unidade atual (C, F, K): ')).strip().upper()[0]
+converter = str(input('converter para (C, F, K): ')).strip().upper()[0]
 if unidade == "C":
-    if converter_para == "F":
-        resultado = celsius_para_fahrenheit(temperatura)
-    elif converter_para == "K":
-        resultado = celsius_para_kelvin(temperatura)
+    if converter == "F":
+        resultado = celsiusParaFahrenheit(temperatura)
+    elif converter == "K":
+        resultado = CelsiusParaKelvin(temperatura)
 elif unidade == "F":
-    if converter_para == "C":
-        resultado = fahrenheit_para_celsius(temperatura)
-    elif converter_para == "K":
-        celsius = fahrenheit_para_celsius(temperatura)
-    resultado = celsius_para_kelvin(celsius)
+    if converter == "C":
+        resultado = FahrenheitParaCelsius(temperatura)
+    elif converter == "K":
+        celsius = FahrenheitParaCelsius(temperatura)
+    resultado = CelsiusParaKelvin(celsius)
 elif unidade == "K":
-    if converter_para == "C":
-        resultado = kelvin_para_celsius(temperatura)
-    elif converter_para == "F":
-        celsius = kelvin_para_celsius(temperatura)
-        resultado = celsius_para_fahrenheit(celsius)
+    if converter == "C":
+        resultado = KelvinParCelsius(temperatura)
+    elif converter == "F":
+        celsius = KelvinParCelsius(temperatura)
+        resultado = celsiusParaFahrenheit(celsius)
 else:
-     resultado = "Unidade inválida."
+     resultado = 'unidade inválida.'
      
-print(f"Temperatura convertida: {resultado} {converter_para}")
+print('temperatura convertida: {} {}'.format(resultado, converter))
